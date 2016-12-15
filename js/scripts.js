@@ -26,6 +26,7 @@ $(document).ready(function () {
   $("#input form").submit(function (event) {
     event.preventDefault();
     var phrase = $("#phrase").val();
-    console.log(arrayToString(replaceVowels(toArray(phrase))));
+    $("#puzzle").text((arrayToString(replaceVowels(toArray(phrase)))));
+    $(".result").show();
   });
 });
