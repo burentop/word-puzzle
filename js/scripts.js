@@ -16,12 +16,16 @@ var replaceVowels = function (array) {
   return withDash;
 }
 
+var arrayToString = function (array) {
+  return array.join("");
+}
+
 
 
 $(document).ready(function () {
   $("#input form").submit(function (event) {
     event.preventDefault();
     var phrase = $("#phrase").val();
-    console.log(replaceVowels(toArray(phrase)));
+    console.log(arrayToString(replaceVowels(toArray(phrase))));
   });
 });
